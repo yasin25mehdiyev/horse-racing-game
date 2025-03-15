@@ -20,7 +20,7 @@ A modern, interactive horse racing simulation game built with Vue 3 and TypeScri
 
 ### Prerequisites
 
-- Node.js (v16.x or later)
+- Node.js (v18.x or later)
 
 ### Quick Start
 
