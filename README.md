@@ -4,7 +4,7 @@ A modern, interactive horse racing simulation game built with Vue 3 and TypeScri
 
 ## Deployment
 
-**Live Demo:** [https://yasin25mehdiyev.github.io/horse-racing-game](https://yasin25mehdiyev.github.io/horse-racing-game)
+🎮 **[Live Demo](https://yasin25mehdiyev.github.io/horse-racing-game)** 
 
 ## Tech Stack
 
