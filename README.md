@@ -1,22 +1,27 @@
-Horse Racing Game
+# Horse Racing Game
+
 A modern, interactive horse racing simulation game built with Vue 3 and TypeScript.
-Tech Stack
 
-Frontend: Vue 3 (Composition API)
-State Management: Vuex
-Language: TypeScript
-Routing: Vue Router
-Design Methodology: Atomic Design
-Testing: Playwright (E2E)
-Libraries: GSAP (animations), Lucide (icons), Tailwind CSS
+## Tech Stack
 
-Getting Started
-Prerequisites
+- **Frontend:** Vue 3 (Composition API)
+- **State Management:** Vuex
+- **Language:** TypeScript
+- **Routing:** Vue Router
+- **Design Methodology:** Atomic Design
+- **Testing:** Playwright (E2E)
+- **Libraries:** GSAP (animations), Lucide (icons), Tailwind CSS
 
-Node.js (v16.x or later)
+## Getting Started
 
-Quick Start
-bashCopy# Install dependencies
+### Prerequisites
+
+- Node.js (v16.x or later)
+
+### Quick Start
+
+```bash
+# Install dependencies
 npm install
 
 # Start development server
@@ -28,7 +33,8 @@ npm run build
 # Run tests
 npm run test
 
-Project Structure
+## Project Structure
+
 The project follows the Atomic Design methodology:
 
 ├── node_modules/     # Dependencies
