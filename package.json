@@ -7,7 +7,9 @@
     "build": "run-p type-check build-only",
     "preview": "vite preview",
     "build-only": "vite build",
-    "type-check": "vue-tsc --noEmit -p tsconfig.app.json --composite false"
+    "type-check": "vue-tsc --noEmit -p tsconfig.app.json --composite false",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@fortawesome/vue-fontawesome": "^3.0.8",
@@ -36,6 +38,7 @@
     "@vue/tsconfig": "^0.4.0",
     "autoprefixer": "^10.4.15",
     "copyfiles": "^2.4.1",
+    "gh-pages": "^6.3.0",
     "npm-run-all": "^4.1.5",
     "postcss": "^8.4.29",
     "tailwindcss": "^3.3.3",
