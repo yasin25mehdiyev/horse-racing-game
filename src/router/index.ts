@@ -9,7 +9,7 @@ const routes = [
 ]
 
 const router = createRouter({
-  history: createWebHashHistory('/horse-racing-game/'),
+  history: createWebHashHistory(),
   routes
 })
 
