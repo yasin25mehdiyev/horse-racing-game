@@ -12,6 +12,7 @@ A modern, interactive horse racing simulation game built with Vue 3 and TypeScri
 - **State Management:** Vuex
 - **Language:** TypeScript
 - **Routing:** Vue Router
+- **UI Components:** Shadcn-UI
 - **Design Methodology:** Atomic Design
 - **Testing:** Playwright (E2E)
 - **Libraries:** GSAP (animations), Lucide (icons), Tailwind CSS
@@ -34,8 +35,11 @@ npm run dev
 # Build for production
 npm run build
 
-# Run tests
-npm run test
+# Run E2E tests
+npm run test:e2e
+
+# Debug E2E tests
+npm run test:e2e:debug
 
 ## Project Structure
 
@@ -57,6 +61,10 @@ The project follows the Atomic Design methodology:
 │   ├── types/        # TypeScript types
 │   ├── views/        # Page views
 │   └── main.ts       # Application entry point
+├── tests/            # Test files
+│   └── e2e/          # End-to-end tests
+│       ├── helpers/  # Test helpers and utilities
+│       └── views/    # Page-specific tests
 ├── .gitignore        # Git ignore file
 ├── .prettierrc       # Prettier configuration
 ├── components.json   # Components configuration
