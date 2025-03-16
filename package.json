@@ -9,7 +9,11 @@
     "build-only": "vite build",
     "type-check": "vue-tsc --noEmit -p tsconfig.app.json --composite false",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "deploy": "gh-pages -d dist",
+    "test:e2e": "playwright test",
+    "test:e2e:ui": "playwright test --ui",
+    "test:e2e:debug": "playwright test --debug",
+    "test:e2e:report": "playwright show-report"
   },
   "dependencies": {
     "@fortawesome/vue-fontawesome": "^3.0.8",
@@ -31,6 +35,7 @@
     "vuex": "^4.1.0"
   },
   "devDependencies": {
+    "@playwright/test": "^1.51.0",
     "@tsconfig/node18": "^18.2.0",
     "@types/node": "^18.17.5",
     "@types/vue-router": "^2.0.0",
