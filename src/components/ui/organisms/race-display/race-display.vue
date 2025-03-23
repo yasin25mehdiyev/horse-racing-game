@@ -22,8 +22,8 @@ const isGenerated = computed<boolean>(() => store.getters['horseRace/isGenerated
 
 // Container classes with conditional logic
 const containerClasses = computed<string>(() =>
-  cn('lg:w-1/2', {
-    'lg:w-2/5': isGenerated.value,
+  cn('md:w-1/2', {
+    'lg:w-4/6': isGenerated.value,
   }),
 );
 
@@ -37,7 +37,6 @@ const componentProps = computed(() => {
     title: "Ready to Race?",
     primaryText: "No races have been generated yet.",
     secondaryText: "Please, click generate horses from generate button and then start race",
-    class: cn('lg:mx-4')
   }
 });
 </script>

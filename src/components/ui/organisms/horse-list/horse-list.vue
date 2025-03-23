@@ -49,8 +49,8 @@ const sortedHorses = computed<Horse[]>(() =>
 
 // Container classes with conditional logic
 const containerClasses = computed<string>(() =>
-    cn('lg:w-1/2', {
-        'lg:w-1/5': isGenerated.value,
+    cn('md:w-1/2', {
+        'lg:w-2/6': isGenerated.value,
     }),
 );
 

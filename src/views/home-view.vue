@@ -1,11 +1,13 @@
 <template>
   <DashboardTemplate>
-    <div :class="cn('mx-auto flex flex-col justify-between space-y-5 my-4', 'lg:flex-row lg:space-y-0')">
-      <!-- Horse List -->
-      <HorseList />
+    <div :class="cn('mx-auto flex flex-col justify-between space-y-5 my-4', 'md:gap-3', 'lg:flex-row lg:space-y-0')">
+      <div :class="cn('space-y-4', 'md:w-full md:flex md:space-y-0 md:gap-3', 'lg:w-full')">
+        <!-- Horse List -->
+        <HorseList />
 
-      <!-- Horse Animations -->
-      <RaceDisplay />
+        <!-- Horse Animations -->
+        <RaceDisplay />
+      </div>
 
       <!-- Program and Results -->
       <RaceInformation v-if="isGenerated" />

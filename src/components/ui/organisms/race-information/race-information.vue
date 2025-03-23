@@ -1,5 +1,5 @@
 <template>
-    <div :class="cn('!mt-8', 'lg:flex lg:w-2/5 lg:!m-0')">
+    <div :class="cn('!mt-8', 'lg:flex lg:w-4/6 lg:!m-0')">
         <RaceProgram />
         <RaceResults />
     </div>
