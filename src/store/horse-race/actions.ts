@@ -49,7 +49,7 @@ export const actions: ActionTree<AppState, unknown> = {
     const results = [...(state.results || [])]
     results[runIndex] = resultHorses.map(horse => ({
       ...horse,
-      finishTime: horse.finishTime,
+      time: horse.time,
     }))
 
     commit(MutationTypes.SET_RUN_RESULT_WITH_FINISH_TIMES, results)

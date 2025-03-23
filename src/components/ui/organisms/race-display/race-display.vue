@@ -1,5 +1,5 @@
 <template>
-  <div :class="cn('lg:w-2/5')">
+  <div :class="containerClasses">
     <component :is="currentComponent" v-bind="componentProps" />
   </div>
 </template>
@@ -20,6 +20,13 @@ const store = useStore();
 // Store state
 const isGenerated = computed<boolean>(() => store.getters['horseRace/isGenerated']);
 
+// Container classes with conditional logic
+const containerClasses = computed<string>(() =>
+  cn('lg:w-1/2', {
+    'lg:w-2/5': isGenerated.value,
+  }),
+);
+
 // UI logic
 const currentComponent = computed(() => isGenerated.value ? RaceAnimation : RacePrompt);
 
@@ -30,7 +37,7 @@ const componentProps = computed(() => {
     title: "Ready to Race?",
     primaryText: "No races have been generated yet.",
     secondaryText: "Please, click generate horses from generate button and then start race",
-    class: cn('mx-4')
+    class: cn('lg:mx-4')
   }
 });
 </script>

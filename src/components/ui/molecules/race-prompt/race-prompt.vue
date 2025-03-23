@@ -1,6 +1,6 @@
 <template>
-    <div :class="cn('flex flex-col items-center justify-center h-full')">
-        <div :class="cn('text-center p-6 border-2 border-black rounded bg-gray-100 w-full max-w-lg')">
+    <div :class="cn('flex flex-col h-full w-full')">
+        <div :class="cn('text-center p-6 border-2 border-black rounded bg-gray-100 w-full h-full')">
             <Typography variant="h4" weight="bold" color="success" :class="cn('mb-4')">
                 {{ title }}
             </Typography>

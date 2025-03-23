@@ -1,21 +1,23 @@
 <template>
     <div :class="containerClasses">
-        <div :class="cn(
-            'font-bold bg-yellow-400 p-2 rounded border border-black text-center',
-        )
-            ">
-            <Typography variant="h5" :class="cn('text-white')">Horse List (1-20)</Typography>
-        </div>
-        <div :class="cn('mt-3', 'lg:m-0')">
-            <div :class="cn('max-h-[525px] overflow-y-scroll')" v-if="hasHorses">
-                <Table :columns="columns" :data="sortedHorses" />
+        <div v-if="hasHorses">
+            <div :class="cn(
+                'font-bold bg-yellow-400 p-2 rounded border border-black text-center',
+            )
+                ">
+                <Typography variant="h5" :class="cn('text-white')">Horse List (1-20)</Typography>
             </div>
-
-            <RacePrompt v-else :class="cn('mt-4')" title="Horses Ready to Race"
-                primaryText="Your race roster is currently empty."
-                secondaryText="Please click the 'Generate' button to create a randomized selection of horses for the upcoming races." />
+            <div :class="cn('mt-3', 'lg:m-0')">
+                <div :class="cn('max-h-[525px] overflow-y-scroll')">
+                    <Table :columns="columns" :data="sortedHorses" />
+                </div>
+            </div>
         </div>
+
+        <RacePrompt v-else title="Horses Ready to Race" primaryText="Your race roster is currently empty."
+            secondaryText="Please click the 'Generate' button to create a randomized selection of horses for the upcoming races." />
     </div>
+
 </template>
 
 <script setup lang="ts">
@@ -47,7 +49,7 @@ const sortedHorses = computed<Horse[]>(() =>
 
 // Container classes with conditional logic
 const containerClasses = computed<string>(() =>
-    cn('lg:w-2/5', {
+    cn('lg:w-1/2', {
         'lg:w-1/5': isGenerated.value,
     }),
 );

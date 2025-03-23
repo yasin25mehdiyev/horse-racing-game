@@ -47,15 +47,15 @@ const formattedResults = computed(() => {
         if (!run) return [];
 
         return [...run]
-            .sort((a, b) => a.finishTime - b.finishTime)
+            .sort((a, b) => a.time - b.time)
             .map((horse, idx) => ({
                 ...horse,
                 position: idx + 1,
-                finishTime: horse.finishTime.toFixed(2),
+                time: horse.time.toFixed(2),
             }));
     });
 });
 
 // Define table columns
-const resultColumns = ['position', 'name', 'finishTime'];
+const resultColumns = ['position', 'name', 'time'];
 </script>

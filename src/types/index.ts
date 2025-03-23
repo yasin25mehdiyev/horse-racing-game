@@ -4,7 +4,7 @@ type Horse = {
   name: string
   condition: number
   color: string
-  finishTime: number
+  time: number
 }
 
 type Schedule = {

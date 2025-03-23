@@ -10,17 +10,17 @@ import { cn } from '@/lib';
 
 const typographyVariants = {
   variant: {
-    display: 'text-7xl',
-    h1: 'text-6xl',
-    h2: 'text-5xl',
-    h3: 'text-4xl',
-    h4: 'text-3xl',
-    h5: 'text-2xl',
-    h6: 'text-xl',
-    lg: 'text-lg',
-    md: 'text-md',
-    sm: 'text-sm',
-    xs: 'text-xs',
+    display: 'text-5xl lg:text-7xl',
+    h1: 'text-4xl lg:text-6xl',
+    h2: 'text-3xl lg:text-5xl',
+    h3: 'text-2xl lg:text-4xl',
+    h4: 'text-xl lg:text-3xl',
+    h5: 'text-xl lg:text-2xl',
+    h6: 'text-lg lg:text-xl',
+    lg: 'text-md lg:text-lg',
+    md: 'text-sm lg:text-md',
+    sm: 'text-xs lg:text-sm',
+    xs: 'text-xs lg:text-xs',
   },
   color: {
     base: 'text-white',

@@ -103,7 +103,7 @@ const useRaceAnimation = () => {
 
       const resultHorses: Horse[] = run.horses.map((horse, index) => ({
         ...horse,
-        finishTime: finishTimes[index],
+        time: finishTimes[index],
       }))
 
       store.dispatch('horseRace/addRunResultWithFinishTimes', {
