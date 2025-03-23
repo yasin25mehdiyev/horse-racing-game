@@ -9,4 +9,4 @@ const formatTableHeader = (column: string): string => {
     )
 }
 
-export { formatTableHeader }
+export { formatTableHeader };

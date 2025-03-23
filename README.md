@@ -54,6 +54,7 @@ The project follows the Atomic Design methodology:
 │   │       ├── atoms/    # Basic UI elements
 │   │       ├── molecules/# Combinations of atoms
 │   │       └── organisms/# Complex UI sections
+│   ├── composables/  # Vue composition functions
 │   ├── lib/          # Library code
 │   ├── router/       # Vue Router configuration
 │   ├── store/        # Vuex store modules

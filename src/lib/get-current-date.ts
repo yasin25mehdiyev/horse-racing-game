@@ -1,3 +1,4 @@
+// Function to get the current date
 const getCurrentDate = (): string => {
   const date = new Date()
   const currentDay = date.getDate()
@@ -10,4 +11,4 @@ const getCurrentDate = (): string => {
   return `${currentDay}.${getFormattedMonth(currentMonth)}.${currentYear}`
 }
 
-export { getCurrentDate }
+export { getCurrentDate };

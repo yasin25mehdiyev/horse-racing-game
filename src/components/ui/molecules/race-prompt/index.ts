@@ -1,1 +1,1 @@
-export { default as RacePrompt } from './race-prompt.vue'
+export { default as RacePrompt } from './race-prompt.vue';

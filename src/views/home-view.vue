@@ -14,17 +14,20 @@
 </template>
 
 <script setup lang="ts">
-import { computed } from 'vue'
-import { useStore } from 'vuex'
+import { computed } from 'vue';
+import { useStore } from 'vuex';
 
-import { DashboardTemplate } from '@/components/templates'
-import { HorseList } from '@/components/ui/organisms/horse-list'
-import { RaceDisplay } from '@/components/ui/organisms/race-display'
-import { RaceInformation } from '@/components/ui/organisms/race-information'
+// Components
+import { DashboardTemplate } from '@/components/templates';
+import { HorseList } from '@/components/ui/organisms/horse-list';
+import { RaceDisplay } from '@/components/ui/organisms/race-display';
+import { RaceInformation } from '@/components/ui/organisms/race-information';
 
-import { cn } from '@/lib'
+// Utilities
+import { cn } from '@/lib';
 
 const store = useStore();
 
-const isGenerated = computed<boolean>(() => store.getters['horseRace/isGenerated'])
+// Store state
+const isGenerated = computed<boolean>(() => store.getters['horseRace/isGenerated']);
 </script>

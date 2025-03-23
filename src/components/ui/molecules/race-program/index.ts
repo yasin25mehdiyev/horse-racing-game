@@ -1,1 +1,1 @@
-export { default as RaceProgram } from './race-program.vue'
+export { default as RaceProgram } from './race-program.vue';

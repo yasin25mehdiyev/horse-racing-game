@@ -1,1 +1,1 @@
-export { default as RaceAnimation } from './race-animation.vue'
+export { default as RaceAnimation } from './race-animation.vue';

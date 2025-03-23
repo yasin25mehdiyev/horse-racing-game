@@ -3,6 +3,7 @@ import { type AppState } from './state'
 import { MutationTypes } from './mutation-types'
 import type { Horse, Schedule } from '@/types'
 
+// Mutations
 export const mutations: MutationTree<AppState> = {
   [MutationTypes.SET_HORSES](state, horses: Horse[]) {
     state.horses = horses

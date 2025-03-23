@@ -1,3 +1,4 @@
+// Horse and Schedule Types
 type Horse = {
   id: number
   name: string
@@ -11,4 +12,4 @@ type Schedule = {
   distance: number
 }
 
-export type { Horse, Schedule }
+export type { Horse, Schedule };

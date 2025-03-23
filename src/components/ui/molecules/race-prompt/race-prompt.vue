@@ -14,8 +14,7 @@
                 </Typography>
             </div>
 
-            <Button v-if="buttonText" variant="success" @click="$emit('button-click')"
-                :class="cn('px-6 py-3 font-bold')">
+            <Button v-if="showButton" variant="success" @click="handleButtonClick" :class="cn('px-6 py-3 font-bold')">
                 {{ buttonText }}
             </Button>
         </div>
@@ -23,17 +22,27 @@
 </template>
 
 <script setup lang="ts">
-import { Button } from '@/components/ui/atoms/button'
-import { Typography } from '@/components/ui/atoms/typography'
+import { computed } from 'vue';
 
-import { cn } from '@/lib'
+// Components
+import { Button } from '@/components/ui/atoms/button';
+import { Typography } from '@/components/ui/atoms/typography';
 
-defineProps<{
+// Utilities
+import { cn } from '@/lib';
+
+const props = defineProps<{
     title: string
     primaryText: string
     secondaryText: string
     buttonText?: string
-}>()
+}>();
 
-defineEmits(['button-click'])
+const emit = defineEmits(['button-click']);
+
+// UI logic
+const showButton = computed<boolean>(() => !!props.buttonText);
+
+// Event handlers
+const handleButtonClick = () => emit('button-click');
 </script>

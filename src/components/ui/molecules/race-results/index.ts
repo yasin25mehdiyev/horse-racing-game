@@ -1,1 +1,1 @@
-export { default as RaceResults } from './race-results.vue'
+export { default as RaceResults } from './race-results.vue';

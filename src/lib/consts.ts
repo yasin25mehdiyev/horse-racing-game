@@ -1,4 +1,4 @@
-const colors: string[] = [
+const COLORS: string[] = [
   '#FF5733',
   '#33FF57',
   '#3357FF',
@@ -21,6 +21,20 @@ const colors: string[] = [
   '#FF6633',
 ];
 
-const distances: number[] = [1200, 1400, 1600, 1800, 2000, 2200];
+const DISTANCES: number[] = [1200, 1400, 1600, 1800, 2000, 2200];
 
-export { colors, distances }
+const TOTAL_LAPS: number = 6;
+const HORSE_POSITION_RESET_DELAY: number = 100;
+const FINISH_LINE_OFFSET: number = 30;
+const DEFAULT_FINISH_LINE_OFFSET: number = FINISH_LINE_OFFSET * 10;
+const HORSE_LANE_HEIGHT: number = 48;
+
+export {
+  COLORS,
+  DISTANCES,
+  TOTAL_LAPS,
+  HORSE_POSITION_RESET_DELAY,
+  FINISH_LINE_OFFSET,
+  DEFAULT_FINISH_LINE_OFFSET,
+  HORSE_LANE_HEIGHT,
+};

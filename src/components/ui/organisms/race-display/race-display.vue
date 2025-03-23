@@ -1,20 +1,36 @@
 <template>
   <div :class="cn('lg:w-2/5')">
-    <RaceAnimation v-if="isGenerated" />
-    <RacePrompt v-else title="Ready to Race?" primaryText="No races have been generated yet."
-      secondaryText="Please, click generate horses from generate button and then start race" :class="cn('mx-4')" />
+    <component :is="currentComponent" v-bind="componentProps" />
   </div>
 </template>
-
+;
 <script setup lang="ts">
-import { computed } from 'vue'
-import { useStore } from 'vuex'
+import { computed } from 'vue';
+import { useStore } from 'vuex';
 
-import { RaceAnimation } from '@/components/ui/molecules/race-animation'
-import { RacePrompt } from '@/components/ui/molecules/race-prompt'
+// Components
+import { RaceAnimation } from '@/components/ui/molecules/race-animation';
+import { RacePrompt } from '@/components/ui/molecules/race-prompt';
 
-import { cn } from '@/lib'
+// Utilities
+import { cn } from '@/lib';
 
-const store = useStore()
-const isGenerated = computed(() => store.getters['horseRace/isGenerated'])
+const store = useStore();
+
+// Store state
+const isGenerated = computed<boolean>(() => store.getters['horseRace/isGenerated']);
+
+// UI logic
+const currentComponent = computed(() => isGenerated.value ? RaceAnimation : RacePrompt);
+
+const componentProps = computed(() => {
+  if (isGenerated.value) return {};
+
+  return {
+    title: "Ready to Race?",
+    primaryText: "No races have been generated yet.",
+    secondaryText: "Please, click generate horses from generate button and then start race",
+    class: cn('mx-4')
+  }
+});
 </script>

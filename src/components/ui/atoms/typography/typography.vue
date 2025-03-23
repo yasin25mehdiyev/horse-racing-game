@@ -23,6 +23,7 @@ const typographyVariants = {
     xs: 'text-xs',
   },
   color: {
+    base: 'text-white',
     primary: 'text-primary',
     secondary: 'text-gray-500',
     tertiary: 'text-tertiary',

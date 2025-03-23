@@ -1,1 +1,1 @@
-export { default as DashboardTemplate } from './dashboard-template.vue'
+export { default as DashboardTemplate } from './dashboard-template.vue';

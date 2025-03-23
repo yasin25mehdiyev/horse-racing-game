@@ -1,26 +1,30 @@
 import { test, expect } from '@playwright/test'
 import { generateHorses, getStartRaceButton, getHorsePositions } from '../helpers'
 
+// Tests for Home view functionality
 test.describe('Home View', () => {
+  // Navigate to home before each test
   test.beforeEach(async ({ page }) => {
     await page.goto('/')
   })
 
+  // Verifies UI elements are visible
   test('should display all major components', async ({ page }) => {
     await expect(page.getByText(/horse list/i)).toBeVisible()
-    await expect(page.getByText(/ready to race?/i)).toBeVisible()
+    await expect(page.getByText(/Horses Ready to Race/i)).toBeVisible()
 
     const horseList = await page.$('.font-bold.bg-yellow-400')
     expect(horseList).not.toBeNull()
   })
 
+  // Tests horse generation functionality
   test('should generate horses when clicking generate button', async ({
     page,
   }) => {
     await generateHorses(page)
 
     await expect(
-      page.getByText(/please, click generate horses from generate button/i),
+      page.getByText(/please click the 'Generate' button to create a randomized selection of horses for the upcoming races./i),
     ).not.toBeVisible()
 
     const horseName = await page
@@ -32,6 +36,7 @@ test.describe('Home View', () => {
     expect(horseName).not.toBe('')
   })
 
+  // Tests race start/stop controls
   test('should start and stop the race correctly', async ({ page }) => {
     await generateHorses(page)
   
@@ -58,4 +63,4 @@ test.describe('Home View', () => {
     
     expect(restartedPositions).not.toEqual(stoppedPositions)
   })
-})
+});

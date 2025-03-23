@@ -1,7 +1,8 @@
 import type { Horse, Schedule } from '@/types'
 
-import { colors } from "@/lib"
+import { COLORS } from "@/lib"
 
+// State structure for horse racing app
 type AppState = {
   horses: Horse[]
   schedule: Schedule[]
@@ -13,11 +14,12 @@ type AppState = {
   isPaused: boolean
 }
 
+// Initial app state
 const state: AppState = {
   horses: [],
   schedule: [],
   results: [],
-  colors,
+  colors: COLORS,
   isGenerated: false,
   isFinished: false,
   isRunning: false,

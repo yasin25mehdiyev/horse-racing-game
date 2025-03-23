@@ -1,6 +1,7 @@
 import { type GetterTree } from 'vuex'
 import { type AppState } from './state'
 
+// Getters
 export const getters: GetterTree<AppState, unknown> = {
   allHorses: state => state.horses,
   allSchedules: state => state.schedule,

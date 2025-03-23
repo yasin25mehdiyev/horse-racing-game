@@ -1,3 +1,4 @@
+// Mutations Types
 const MutationTypes = {
   SET_HORSES: 'SET_HORSES',
   SET_SCHEDULE: 'SET_SCHEDULE',

@@ -1,1 +1,1 @@
-export { default as RaceInformation } from './race-information.vue'
+export { default as RaceInformation } from './race-information.vue';

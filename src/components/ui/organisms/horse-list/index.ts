@@ -1,1 +1,1 @@
-export { default as HorseList } from './horse-list.vue'
+export { default as HorseList } from './horse-list.vue';
