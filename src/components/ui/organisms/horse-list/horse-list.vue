@@ -8,7 +8,7 @@
                 <Typography variant="h5" :class="cn('text-white')">Horse List (1-20)</Typography>
             </div>
             <div :class="cn('mt-3', 'lg:m-0')">
-                <div :class="cn('max-h-[525px] overflow-y-scroll')">
+                <div :class="cn('max-h-[525px] overflow-y-scroll overflow-x-hidden')">
                     <Table :columns="columns" :data="sortedHorses" />
                 </div>
             </div>
