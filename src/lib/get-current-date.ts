@@ -5,10 +5,13 @@ const getCurrentDate = (): string => {
   const currentMonth = date.getMonth() + 1
   const currentYear = date.getFullYear()
 
+  const getFormattedDay = (day: number) => (day < 10 ? `0${day}` : day)
   const getFormattedMonth = (month: number) =>
     month < 10 ? `0${month}` : month
 
-  return `${currentDay}.${getFormattedMonth(currentMonth)}.${currentYear}`
+  return `${getFormattedDay(currentDay)}.${getFormattedMonth(
+    currentMonth
+  )}.${currentYear}`
 }
 
-export { getCurrentDate };
+export { getCurrentDate }
